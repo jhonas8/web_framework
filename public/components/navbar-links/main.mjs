@@ -13,7 +13,9 @@ export default function navbarLinks(){
                 $('ul#navbar-links')
                     .append(`
                         <li class="navbar-link">
-                            ${ link }
+                            <a href="#${link}">
+                                ${ link }
+                            </a>
                         </li>
                     `)
             }

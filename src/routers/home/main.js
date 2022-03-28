@@ -5,12 +5,12 @@ class HomeRoute {
     constructor(){
         this.router = this.#express.Router()
 
-        this.sendFile = this.sendFile.bind(this)
+        this.sendHomepageHtml = this.sendHomepageHtml.bind(this)
 
-        this.sendFile()
+        this.sendHomepageHtml()
     }
 
-    sendFile() {
+    sendHomepageHtml() {
         this.router.get('/', (req, res, next) => {
             const relativePath =
                 this.#path.relative(__dirname, '../../../public')

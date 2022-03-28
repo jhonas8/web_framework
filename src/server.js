@@ -22,6 +22,13 @@ class Server {
                     .join(__dirname, '..', 'public')
             )
         )
+
+        //ERROR 404 page 
+        this.app.use((req, res, ctx) => {
+            res.status(404).send(`
+                <h1> Page not found! </h1>
+            `) 
+        })
     }
 
     start() {

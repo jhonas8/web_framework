@@ -4,15 +4,19 @@
   "description": "",
   "main": ".prettierrc.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js && npm run open",
+    "git": "git add . && git commit -m $npm_config_message && git push"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "http-server": "^14.1.0",
     "nodemon": "^2.0.15"
   },
   "dependencies": {
+    "concurrently": "^7.0.0",
     "express": "^4.17.3"
   }
 }
